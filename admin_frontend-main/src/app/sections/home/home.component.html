@@ -1,0 +1,38 @@
+<div class='card'>
+    <div class='card-header'>
+   
+    </div>
+  
+    
+    <div class='card-body'>            
+      <div class='table-responsive'>
+        <table class='table'
+              *ngIf = 'posts && posts.length'>
+          <thead>
+            <tr>
+              <th> 
+                <!-- <button class='btn btn-primary'
+                (click)='toggleImage()'>
+                  {{showImage? 'Hide' : 'Show'}} Image
+                </button> -->
+              </th>
+              <th>Post Title</th>
+              <th>Description</th>
+              <th>Tag</th>
+            </tr>
+           
+          </thead>
+          <tbody>  
+              <tr *ngFor='let  post of posts'>
+                  <td><img
+                    [src] = 'post.Image' ></td>
+                  <td>{{ post.PostTitle }}</td>
+                  <td>{{ post.Description }}</td>
+                  <td>{{ post.Tag }}</td>
+                </tr>              
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

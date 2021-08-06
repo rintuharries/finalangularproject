@@ -1,0 +1,43 @@
+<div>
+
+    <div class="card" style="border-radius: 25px;">
+  
+      <div class="card-body p-5">
+        <form (ngSubmit)="approvePost()">
+          <div style="width:600px;">
+            <div style="float: left; width: 130px">
+            </div>
+          </div>
+          <br />
+          <br />
+          <br />
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form3Example1cg">Title</label>
+            <label type="text" id="form3Example1" class="form-control form-control-lg">{{post.PostTitle}}</label>
+          </div>
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form3Example1cg">Description</label>
+            <label type="text" id="form3Example2" class="form-control form-control-lg">{{post.Description}}</label>
+          </div>
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form3Example3cg">Image</label>
+            <label type="text" id="form3Example3" class="form-control form-control-lg"><img [src]='post.Image' [style.width.px] = 'imageWidth' 
+              [style.margin.px] = 'imageMargin'></label>
+            </div>
+         <div class="form-outline mb-4">
+          <label class="form-label" for="form3Example1cg">Status</label>
+          <td><input type="text" name="status" [(ngModel)]="item.Status"/></td>                  
+
+         </div>
+        <div style="width:600px;">
+          <div style="float: right; width: 130px">
+            <button type="submit" class="btn btn-primary btn-block" >Submit</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+   
+</div>
+    </div>
